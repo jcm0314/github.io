@@ -16,7 +16,7 @@ title: 홈
   <h2>📝 최근 게시물</h2>
   
   <div class="posts-grid">
-    {% raw %}{% for post in site.posts limit:6 %}
+    {% for post in site.posts limit:6 %}
     <article class="post-card">
       <div class="post-category">
         {% for category in post.categories %}
@@ -39,7 +39,7 @@ title: 홈
       <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
       <a href="{{ post.url }}" class="btn btn-small">자세히 보기</a>
     </article>
-    {% endfor %}{% endraw %}
+    {% endfor %}
   </div>
 </section>
 
