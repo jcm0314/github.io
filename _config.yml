@@ -1,8 +1,9 @@
-title: 짱천명명
+title: 개발자의 기술 블로그
 email: jcm03141@gmail.com
 description: >- 
-  GitHub Pages를 사용한 짱천명 개인 블로그입니다.
-  기술, 개발, 일상에 대한 글을 작성합니다.
+  개발과 기술에 대한 이야기를 나누는 공간입니다.
+  웹 개발, 모바일 앱, 인공지능 등 다양한 기술에 대한 
+  경험과 지식을 공유합니다.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jcm0314.github.io" # the base hostname & protocol for your site
 github_username:  jcm0314

@@ -27,8 +27,7 @@ permalink: /about/
 ## 연락처
 
 - **이메일**: your-email@example.com
-- **GitHub**: [your-github-username](https://github.com/your-github-username)
-- **Twitter**: [@your-twitter-username](https://twitter.com/your-twitter-username)
+- **GitHub**: [jcm0314](https://github.com/jcm0314)
 
 ## 방문해주셔서 감사합니다! 🙏
 
