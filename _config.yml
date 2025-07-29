@@ -1,12 +1,11 @@
-title: My GitHub Pages Blog
-email: your-email@example.com
+title: 짱천명명
+email: jcm03141@gmail.com
 description: >- 
-  GitHub Pages를 사용한 개인 블로그입니다.
+  GitHub Pages를 사용한 짱천명 개인 블로그입니다.
   기술, 개발, 일상에 대한 글을 작성합니다.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: your-twitter-username
-github_username:  your-github-username
+url: "https://jcm0314.github.io" # the base hostname & protocol for your site
+github_username:  jcm0314
 
 # Build settings
 theme: minima
