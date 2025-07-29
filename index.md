@@ -61,6 +61,12 @@ title: 홈
   </div>
 </section>
 
+<section class="search-section">
+  <h2>🔍 블로그 검색</h2>
+  <p>원하는 내용을 빠르게 찾아보세요!</p>
+  <a href="/search" class="btn">검색하기</a>
+</section>
+
 <section class="social-section">
   <h2>🌐 소셜 미디어</h2>
   <div class="social-links">

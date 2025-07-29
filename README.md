@@ -63,7 +63,7 @@ tags: [tag1, tag2]
 
 ## 🔗 링크
 
-- [블로그](https://your-username.github.io)
+- [블로그](https://jcm0314.github.io)
 - [소개 페이지](/about)
 
 ## 📄 라이선스

@@ -1,0 +1,65 @@
+{% if page.layout == 'post' %}
+<div class="social-share">
+  <h3>📤 이 글 공유하기</h3>
+  <div class="share-buttons">
+    <!-- Twitter -->
+    <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url | url_encode }}&via={{ site.twitter_username }}" 
+       target="_blank" 
+       class="share-btn twitter" 
+       title="Twitter에 공유">
+      <span>🐦 Twitter</span>
+    </a>
+    
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url | url_encode }}" 
+       target="_blank" 
+       class="share-btn facebook" 
+       title="Facebook에 공유">
+      <span>📘 Facebook</span>
+    </a>
+    
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url | url_encode }}" 
+       target="_blank" 
+       class="share-btn linkedin" 
+       title="LinkedIn에 공유">
+      <span>💼 LinkedIn</span>
+    </a>
+    
+    <!-- 카카오톡 -->
+    <a href="https://story.kakao.com/share?url={{ site.url }}{{ page.url | url_encode }}" 
+       target="_blank" 
+       class="share-btn kakao" 
+       title="카카오톡에 공유">
+      <span>💛 카카오톡</span>
+    </a>
+    
+    <!-- URL 복사 -->
+    <button class="share-btn copy-url" 
+            onclick="copyToClipboard('{{ site.url }}{{ page.url }}')" 
+            title="URL 복사">
+      <span>📋 URL 복사</span>
+    </button>
+  </div>
+</div>
+
+<script>
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(function() {
+    // 복사 성공 알림
+    const button = event.target;
+    const originalText = button.innerHTML;
+    button.innerHTML = '<span>✅ 복사됨!</span>';
+    button.style.background = '#28a745';
+    
+    setTimeout(() => {
+      button.innerHTML = originalText;
+      button.style.background = '';
+    }, 2000);
+  }).catch(function(err) {
+    console.error('URL 복사 실패:', err);
+    alert('URL 복사에 실패했습니다.');
+  });
+}
+</script>
+{% endif %} 

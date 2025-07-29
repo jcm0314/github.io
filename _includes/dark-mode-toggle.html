@@ -1,0 +1,42 @@
+{% if site.dark_mode_enabled %}
+<div class="theme-toggle">
+  <button id="theme-toggle" class="theme-toggle-btn" title="테마 변경">
+    <span class="light-icon">☀️</span>
+    <span class="dark-icon">🌙</span>
+  </button>
+</div>
+
+<script>
+// 다크 모드 토글 기능
+document.addEventListener('DOMContentLoaded', function() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+  
+  // 저장된 테마 불러오기
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    body.setAttribute('data-theme', savedTheme);
+  } else {
+    // 시스템 설정 확인
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    body.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+  }
+  
+  // 테마 토글
+  themeToggle.addEventListener('click', function() {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+  
+  // 시스템 테마 변경 감지
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    if (!localStorage.getItem('theme')) {
+      body.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+    }
+  });
+});
+</script>
+{% endif %} 
